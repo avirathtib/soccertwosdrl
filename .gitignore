@@ -2,6 +2,35 @@ envs/
 ray_results/
 ceia_baseline_agent/
 data/
+.claude/
+
+# Intermediate / superseded weight files
+ablation_weights_2M.pth
+ablation_weights_5M.pth
+selfplay_weights_checkpoint1025.pth
+basic_shaped_weights_9M.pth
+minimal_weights_19M.pth
+
+# Old evaluation PNGs (superseded)
+eval_goaldiff.png
+eval_goaldiff_updated.png
+eval_winrate.png
+eval_winrate_updated.png
+training_progression.png
+
+# Plot and analysis scripts
+plot_results.py
+plot_rolling_reward.py
+plot_reward_components.py
+plot_terminal_signal.py
+plot_training_comparison.py
+plot_eval_updated.py
+
+# Generated plot PNGs
+summary_figure.png
+rolling_reward_curves.png
+terminal_signal_analysis.png
+training_comparison.png
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

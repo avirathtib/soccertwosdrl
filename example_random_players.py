@@ -17,6 +17,11 @@ while True:
         }
     )
 
+    print("this is information", info)
+    if max(done.values()):
+      print("Final ball position:", info[0]["ball_info"]["position"])                                                                         
+      print("Total Reward: ", team0_reward, " x ", team1_reward)
+
     team0_reward += reward[0] + reward[1]
     team1_reward += reward[2] + reward[3]
     if max(done.values()):  # if any agent is done
