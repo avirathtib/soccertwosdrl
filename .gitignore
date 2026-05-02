@@ -18,6 +18,15 @@ eval_winrate.png
 eval_winrate_updated.png
 training_progression.png
 
+# Run / evaluation scripts
+run_ablation_eval.py
+run_fs_vs_ablation.py
+run_fullmatch.py
+run_head_to_head.py
+run_matches.py
+run_trials.py
+evaluate_agents.py
+
 # Plot and analysis scripts
 plot_results.py
 plot_rolling_reward.py
