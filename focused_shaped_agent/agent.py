@@ -9,10 +9,7 @@ import torch.nn as nn
 from soccer_twos import AgentInterface
 
 
-WEIGHTS_PATH = os.path.join(
-    os.path.dirname(os.path.abspath(__file__)),
-    "../selfplay_50_weights.pth",
-)
+WEIGHTS_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "weights.pth")
 
 
 class PolicyNet(nn.Module):
@@ -20,7 +17,7 @@ class PolicyNet(nn.Module):
         super().__init__()
         self.hidden0 = nn.Linear(obs_size, hidden_size)
         self.hidden1 = nn.Linear(hidden_size, hidden_size)
-        self.logits = nn.Linear(hidden_size, branches * actions_per_branch)
+        self.logits  = nn.Linear(hidden_size, branches * actions_per_branch)
 
     def forward(self, x):
         x = torch.relu(self.hidden0(x))
@@ -28,7 +25,7 @@ class PolicyNet(nn.Module):
         return self.logits(x)
 
 
-class SelfPlay50Agent(AgentInterface):
+class FocusedShapedAgent(AgentInterface):
     def __init__(self, env: gym.Env):
         super().__init__()
         raw = torch.load(WEIGHTS_PATH)

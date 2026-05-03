@@ -10,6 +10,11 @@ ablation_weights_5M.pth
 selfplay_weights_checkpoint1025.pth
 basic_shaped_weights_9M.pth
 minimal_weights_19M.pth
+selfplay_50_weights.pth
+selfplay_team_weights.pth
+
+# Superseded agent folders
+selfplay_50_agent/
 
 # Old evaluation PNGs (superseded)
 eval_goaldiff.png
